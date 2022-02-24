@@ -80,7 +80,7 @@
 .contact::after {
   content: "";
   position: absolute;
-  width: 190%;
+  width: 290%;
   height: 130vh;
   background-color: #f74168;
   z-index: 0;
@@ -169,10 +169,10 @@
   }
 
   .contactText {
-    font-size: 3vh !important;
+    font-size: 1.9vh !important;
   }
   .contactText .contactTextBelow {
-    font-size: 1.5vh !important;
+    font-size: 1vh !important;
   }
 
   .contactForm {

@@ -115,12 +115,14 @@
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 5px;
+  display: flex;
 }
 .wallpaper .wallMain .wallTop .searchBox .searchInput {
   border: none;
   font-family: "Poppins", sans-serif;
   outline: none;
   font-weight: bold;
+  width: 100%;
 }
 .wallpaper .wallMain .wallTop .searchBox .searchIcon {
   width: 3vh;
@@ -324,8 +326,13 @@
     letter-spacing: 8px !important;
   }
 
+  .searchBox {
+    width: 50% !important;
+  }
+
   .pixelLogo {
     opacity: 0;
+    pointer-events: none;
   }
 
   .wallBottom {

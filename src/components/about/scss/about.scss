@@ -185,13 +185,28 @@ $shadow : -7px -7px 20px 0px rgba(255, 255, 255, 0.76),
     grid-template-columns: 1fr !important;
     .aboutMe{
         margin-left: 0 !important;
+        font-size: 3vh !important;
     }
     .tabletFrame {
       margin-left: 0 !important;
+      height: 40vh !important;
+      width: 33vh !important;
+      .picture{
+        width: 18vh !important;
+        height: 25vh !important;
+        margin-top: 10px;
+      }
+      .myPictureText{
+        bottom: 30vh !important;
+        font-size: 18px !important;
+      }
     }
     .frameText:nth-child(1) , .frameText:nth-child(4){
         letter-spacing: 1vh !important;
         font-size: 4vw !important;
     }
+  }
+  .leftSide{
+    width: 90% !important;
   }
 }

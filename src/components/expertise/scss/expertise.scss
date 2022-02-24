@@ -81,6 +81,11 @@ $bgColor : rgb(240, 240, 240) ;
         grid-template-columns: 1fr 1fr !important;
         height: 60vh !important;
     }
+    .button1{
+        // font-size: 2vh !important;
+        max-width: 80%;
+        text-align: center;
+    }
 }
 
 //--------------Progress button------------

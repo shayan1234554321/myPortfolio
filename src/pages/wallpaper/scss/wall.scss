@@ -135,11 +135,13 @@ $font2 : 'Oswald', sans-serif;
                 background-color: white;
                 width: fit-content;
                 border-radius: 5px;
+                display: flex;
                 .searchInput{
                     border: none;
                     font-family: $font1;
                     outline: none;
                     font-weight: bold;
+                    width: 100%;
                 }
                 .searchIcon{
                     width: 3vh;
@@ -365,8 +367,12 @@ $font2 : 'Oswald', sans-serif;
         // font-size: 10px !important;
         letter-spacing: 8px !important;
     }
+    .searchBox{
+        width: 50% !important;
+    }
     .pixelLogo {
         opacity: 0;
+        pointer-events: none;
     }
     .wallBottom{
         width: 80%  !important;

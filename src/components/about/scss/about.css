@@ -155,12 +155,28 @@
   }
   .about .aboutMe {
     margin-left: 0 !important;
+    font-size: 3vh !important;
   }
   .about .tabletFrame {
     margin-left: 0 !important;
+    height: 40vh !important;
+    width: 33vh !important;
+  }
+  .about .tabletFrame .picture {
+    width: 18vh !important;
+    height: 25vh !important;
+    margin-top: 10px;
+  }
+  .about .tabletFrame .myPictureText {
+    bottom: 30vh !important;
+    font-size: 18px !important;
   }
   .about .frameText:nth-child(1), .about .frameText:nth-child(4) {
     letter-spacing: 1vh !important;
     font-size: 4vw !important;
+  }
+
+  .leftSide {
+    width: 90% !important;
   }
 }/*# sourceMappingURL=about.css.map */

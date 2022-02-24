@@ -25,7 +25,7 @@ const Contact = forwardRef(({...props},ref) => {
         <div className="contactRight">
           <motion.div
             animate={{ x: "6vw " , opacity:0 , rotate: 90}}
-            whileInView={{ x: "0vw ", opacity:1 ,rotate: 0 , transition: { duration: 1 ,delay: 0.2 } }}
+            whileInView={{ x: "-2vw ", opacity:1 ,rotate: 0 , transition: { duration: 1 ,delay: 0.2 } }}
             className="whatsappIcon"
             style={{ backgroundImage: `url(${whatsapp})` }}
           ></motion.div>

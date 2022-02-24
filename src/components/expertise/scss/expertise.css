@@ -53,6 +53,11 @@
     grid-template-columns: 1fr 1fr !important;
     height: 60vh !important;
   }
+
+  .button1 {
+    max-width: 80%;
+    text-align: center;
+  }
 }
 .progress {
   position: relative;

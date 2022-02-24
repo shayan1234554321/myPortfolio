@@ -101,7 +101,7 @@ $blue : rgb(247, 65, 104) ;
 .contact::after{
     content: '';
     position: absolute;
-    width: 190%;
+    width: 290%;
     height: 130vh;
     background-color: $blue;
     z-index: 0;
@@ -186,9 +186,9 @@ $blue : rgb(247, 65, 104) ;
         grid-template-columns: 1fr !important;
     }
     .contactText{
-        font-size: 3vh !important;
+        font-size: 1.9vh !important;
         .contactTextBelow{
-            font-size: 1.5vh !important;
+            font-size: 1vh !important;
         }
     }
     .contactForm{
