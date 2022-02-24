@@ -85,7 +85,7 @@ $mouseColor: white ;
     .mainText{
         align-items: center;
         flex-direction: column !important;
-        font-size: 6vh !important;
+        font-size: 50px !important;
         .mainTextInside{
             width: 250px !important;
             height: 50px !important;
@@ -204,7 +204,7 @@ $mouseColor: white ;
         transform: translateY(-10px);
     }
     100%{
-        transform: translateY(-200px);
+        transform: translateY(-240px);
     }
 }
 

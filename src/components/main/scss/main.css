@@ -68,7 +68,7 @@
   .mainText {
     align-items: center;
     flex-direction: column !important;
-    font-size: 6vh !important;
+    font-size: 50px !important;
   }
   .mainText .mainTextInside {
     width: 250px !important;
@@ -249,7 +249,7 @@
     transform: translateY(-10px);
   }
   100% {
-    transform: translateY(-200px);
+    transform: translateY(-240px);
   }
 }
 @keyframes words10 {
@@ -257,7 +257,7 @@
     transform: translateY(-10px);
   }
   100% {
-    transform: translateY(-200px);
+    transform: translateY(-240px);
   }
 }
 @-webkit-keyframes aBlock {

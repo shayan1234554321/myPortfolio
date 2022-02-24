@@ -172,7 +172,7 @@ $shadow : -7px -7px 20px 0px rgba(255, 255, 255, 0.76),
             color: black;
         }
         .frameText:nth-child(3){
-          margin-top: -20px;
+          margin-top: -40px;
         }
     }
 
@@ -203,7 +203,10 @@ $shadow : -7px -7px 20px 0px rgba(255, 255, 255, 0.76),
     }
     .frameText:nth-child(1) , .frameText:nth-child(4){
         letter-spacing: 1vh !important;
-        font-size: 4vw !important;
+        font-size: 5vw !important;
+    }
+    .frameText:nth-child(2) , .frameText:nth-child(3){
+        font-size: 20px !important;
     }
   }
   .leftSide{

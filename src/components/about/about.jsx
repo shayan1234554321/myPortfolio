@@ -65,7 +65,7 @@ const About = forwardRef(({...props},ref) => {
           <a className="frameText">I AM</a>
           <a className="frameText">
             <div style={{ overflow: "scroll", height: "60%" }}>
-              I am from Pakistan . Getting my Computer Science Bechelor degree
+              I am from Pakistan . Getting my Computer Science Bachelor degree
               from City University of Science and Technology of Peshawar
             </div>
           </a>

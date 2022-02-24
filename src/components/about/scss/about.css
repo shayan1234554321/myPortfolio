@@ -145,7 +145,7 @@
   color: black;
 }
 .about .rightSide .rightFrame .frameText:nth-child(3) {
-  margin-top: -20px;
+  margin-top: -40px;
 }
 
 @media (max-aspect-ratio: 6/4) {
@@ -173,7 +173,10 @@
   }
   .about .frameText:nth-child(1), .about .frameText:nth-child(4) {
     letter-spacing: 1vh !important;
-    font-size: 4vw !important;
+    font-size: 5vw !important;
+  }
+  .about .frameText:nth-child(2), .about .frameText:nth-child(3) {
+    font-size: 20px !important;
   }
 
   .leftSide {
