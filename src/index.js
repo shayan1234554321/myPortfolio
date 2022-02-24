@@ -19,7 +19,7 @@ import Editor from './pages/photoEditor/editor.jsx';
 
 render(
   <BrowserRouter>
-      {/* < Startup /> */}
+      < Startup />
     <Routes >
       <Route path='/'  element={ <Main/> } />
       <Route exact path="/wallpaper" element={ <Wallpaper /> } />
