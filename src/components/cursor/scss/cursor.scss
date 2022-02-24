@@ -1,0 +1,21 @@
+.cursor1{
+    position: absolute;
+    background-color: white;
+    width: 12vh;
+    height: 12vh;
+    transform: translate( -50% , -50% );
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    // display: block;
+}
+.cursorScreen{
+    mix-blend-mode: difference;
+}
+
+
+@media screen and (max-width: 750px) {
+    .cursor1{
+        display: none;
+    }
+}

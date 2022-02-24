@@ -1,17 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import React from 'react';
+// import { render } from 'react-dom';
+// import App from './App.jsx';
+// render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+
+import {BrowserRouter , Routes , Route} from 'react-router-dom'
+import { render } from 'react-dom';
+import Main from './pages/main/main.jsx'
+import Wallpaper from './pages/wallpaper/wallpaper.jsx'
+import Food from './pages/food/food.jsx'
+import Startup from './components/startup/startup.jsx'
+import Editor from './pages/photoEditor/editor.jsx';
+
+render(
+  <BrowserRouter>
+      {/* < Startup /> */}
+    <Routes >
+      <Route path='/'  element={ <Main/> } />
+      <Route exact path="/wallpaper" element={ <Wallpaper /> } />
+      <Route exact path="/food" element={ <Food /> } />
+      <Route exact path="/editor" element={ <Editor/> } />
+    </Routes>
+  </BrowserRouter>,
+  document.getElementById("root")
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

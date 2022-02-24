@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
+
+// ----------variables------------
+
+$font1 : 'Poppins', sans-serif;
+$font2 : 'Comforter', cursive;
+$font3 : 'Rock 3D', cursive;
+$blue : rgb(247, 65, 104);
+$bgColor : rgb(240, 240, 240) ;
+$mouseColor: white ;
+
+.main{
+    width: 100%;
+    scroll-snap-align: start;
+    height: 100vh;
+    background-color: black;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: $font1;
+    cursor: none;
+    .mainText{
+        display: flex;
+        flex-direction: row;
+        color: white;
+        font-size: 6vw;
+        margin-bottom: 20vh;
+        margin-top: 20vh;
+
+
+// ------------------sub text-----------
+
+        .mainTextInside{
+            font-family: $font1;
+            width: 35vw;
+            height: 10vw;
+            font-weight: bold;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            margin-left: 20px;
+            margin-right: 20px;
+            color: $blue;
+        }
+        
+//--------- -------animating the text--------
+
+        .mainTextInside::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 33vw;
+            height: 10vw;
+            z-index: 4;
+            // border: 2px solid white;
+            background-color: black;
+            animation: aBlock 4s steps(13) infinite ;
+        }
+        .mainTextInside::after{
+            content: '|';
+            position: absolute;
+            text-align: start;
+            top: 0;
+            left: 0;
+            width: 33vw;
+            height: 10vw;
+            z-index: 5;
+            animation: aBlock2 4s infinite steps(13);
+        }
+        .words{
+            z-index: 3;
+            animation: infinite words 12s steps(3);
+        }
+    }
+}
+
+// -------------Different screen---------
+
+@media screen and (max-width: 550px) {
+    .mainText{
+        align-items: center;
+        flex-direction: column !important;
+        font-size: 6vh !important;
+        .mainTextInside{
+            width: 250px !important;
+            height: 50px !important;
+        }
+        .mainTextInside::after{
+            width: 250px !important;
+            height: 100px !important;
+            background-color: black !important;
+            animation: aBlock10 4s infinite steps(13) !important;
+        }
+        .mainTextInside::before{
+            height: 10px !important;
+            width: 250px !important;
+            animation: aBlock11 4s infinite steps(13)  !important;
+        }
+        .words{
+            animation: infinite words10 12s steps(3) !important;
+        }
+    }
+}
+
+.mouseScroll{
+    position: relative;
+    border-radius: 2vh;
+    border: 0.4vh solid $mouseColor;
+    height: 5vh;
+    width: 3vh;
+}
+.mouseScroll::after{
+    content:'';
+    position: absolute;
+    top: 0.5vh;
+    width: 1vh;
+    height: 1vh;
+    background-color: $mouseColor;
+    border-radius: 50%;
+    left: 1vh;
+    animation: mousescroll infinite ease-in-out 4s ;
+}
+
+//-----------Animation of mouse scroll----------------
+
+@keyframes mousescroll {
+        0%{
+            top: 0.5vh ;
+        }
+        20%{
+            top: 1.5vh ;
+        }
+        21%{
+            top: 0.5vh ;
+        }
+        80%{
+            top: 0.5vh ;
+        }
+        100%{
+            top: 1.5vh ;
+        }
+}
+
+//-----------Animation of text for mobile view----------------
+
+@keyframes aBlock10 {
+    0%{
+        left: 0vw;
+    }
+    20%{
+        left: 0vw;
+    }
+    60%{
+        left: 250px;
+    }
+    80%{
+        left: 250px;
+    }
+    90%{
+        left: 0vw;
+    }
+    100%{
+        left: 0vw;
+    }
+}
+@keyframes aBlock11 {
+    0%{
+        left: 0vw;
+        opacity: 1;
+    }
+    20%{
+        opacity: 0;
+        left: 0vw;
+        
+    }
+    40%{
+        opacity: 1;
+        
+    }
+    60%{
+        opacity: 0;
+        left: 250px;
+    }
+    80%{
+        left: 250px;
+    }
+    90%{
+        opacity: 1;
+        left: 0vw;
+    }
+    100%{
+        opacity: 1;
+        left: 0vw;
+    }
+}
+
+@keyframes words10 {
+    0%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(-180px);
+    }
+}
+
+
+//-----------Animation of text for Computer view----------------
+
+
+@keyframes aBlock {
+    0%{
+        left: 0vw;
+    }
+    20%{
+        left: 0vw;
+    }
+    60%{
+        left: 38vw;
+    }
+    80%{
+        left: 38vw;
+    }
+    90%{
+        left: 0vw;
+    }
+    100%{
+        left: 0vw;
+    }
+}
+@keyframes aBlock2 {
+    0%{
+        left: 0vw;
+        opacity: 1;
+    }
+    20%{
+        opacity: 0;
+        left: 0vw;
+        
+    }
+    40%{
+        opacity: 1;
+        
+    }
+    60%{
+        opacity: 0;
+        left: 38vw;
+    }
+    80%{
+        left: 38vw;
+    }
+    90%{
+        opacity: 1;
+        left: 0vw;
+    }
+    100%{
+        opacity: 1;
+        left: 0vw;
+    }
+}
+
+@keyframes words {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-27vw);
+    }
+}

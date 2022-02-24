@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
+
+// ----------variables------------
+
+$font1 : 'Poppins', sans-serif;
+$font2 : 'Comforter', cursive;
+$font3 : 'Rock 3D', cursive;
+$blue : rgb(247, 65, 104);
+$bgColor : rgb(240, 240, 240) ;
+
+
+.expertise{
+    width: 100%;
+    // height: 120vh;
+    background-color: $bgColor;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    flex-direction: column;
+
+    .experience{
+        width: 70%;
+        // border: 2px solid rgb(98, 205, 255);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border-radius: 2vh;
+        height: 60vh;
+        padding: 30px 0px ;
+        box-shadow: 
+                -7px -7px 20px 0px rgb(255, 255, 255),
+                -4px -4px 5px 0px rgb(255, 255, 255),
+                7px 7px 20px 0px #0002,
+                4px 4px 5px 0px #0001, ;
+    }
+    
+    .comfortable{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 40vh;
+        margin-bottom: 10vh;
+    }
+
+    .button1{
+        margin-top: 6vh;
+        margin-bottom: 3vh;
+        font-family: $font1;
+        font-size:  2.5vh;
+        color: $blue;
+        cursor: default;
+        letter-spacing: 5px;
+        border-radius: 10px;
+        padding: 2vw;
+        background-color: $bgColor;
+        border: none;
+        box-shadow: 
+                -7px -7px 20px 0px rgb(255, 255, 255),
+                -4px -4px 5px 0px rgb(255, 255, 255),
+                7px 7px 20px 0px #0002,
+                4px 4px 5px 0px #0001, ;
+        transition: 0.3s ease-in-out;
+    }
+    .button1:hover{
+        box-shadow: 
+        -7px -7px 20px 0px rgba(109, 109, 109, 0.133),
+        -4px -4px 5px 0px rgba(112, 112, 112, 0.133),
+        7px 7px 20px 0px rgb(231, 231, 231),
+        4px 4px 5px 0px rgb(231, 231, 231), ;
+
+    }
+}
+
+@media (max-aspect-ratio: 5/4) {
+    .experience{
+        grid-template-columns: 1fr 1fr !important;
+        height: 100vh !important;
+    }
+    .comfortable{
+        grid-template-columns: 1fr 1fr !important;
+        height: 60vh !important;
+    }
+}
+
+//--------------Progress button------------
+
+.progress{
+    position: relative;
+    left: calc(50% - 6.5vh);
+    top: calc(50% - 6.5vh);
+    cursor: default;
+    background-color:  white;
+    box-shadow: 
+                -7px -7px 20px 0px rgb(255, 255, 255),
+                -4px -4px 5px 0px rgb(255, 255, 255),
+                7px 7px 20px 0px #0002,
+                4px 4px 5px 0px #0001, ;
+
+    border-radius: 50%;
+    width: 13vh ;
+    height: 13vh ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+    .circle{
+        stroke: $blue;
+        stroke-width: 1.5vh;
+        stroke-linecap: round;
+        stroke-dasharray: 31vh;
+        // stroke-dashoffset: 39vh;
+        fill: none;
+        // stroke-dashoffset: calc( 32vh - ( 32vh * 50 ) / 100 );
+    }
+
+    .circleName{
+        font-size: 1.7vh;
+        font-weight: bold;
+        position: absolute;
+        font-family: $font1;
+        text-align: center;
+    }
+}
+.progress:hover{
+    box-shadow: 
+        -7px -7px 20px 0px #0002,
+        -4px -4px 5px 0px #0002,
+        7px 7px 20px 0px rgb(255, 255, 255),
+        4px 4px 5px 0px rgb(255, 255, 255), ;
+}
+
+//-----------------Button 2-----------------
+.button2{
+    position: relative;
+    top: calc(50% - 6vh);
+    left: calc(50% - 6vh);
+    width: 12vh;
+    height: 12vh;
+    box-shadow: 
+                -7px -7px 20px 0px rgb(255, 255, 255),
+                -4px -4px 5px 0px rgb(255, 255, 255),
+                7px 7px 20px 0px #0002,
+                4px 4px 5px 0px #0001, ;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.61);
+    transition: 0.3s ease-in-out;
+    .buttonImage{
+        width: 8vh;
+        height: 8vh;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.button2:hover{
+    box-shadow: 
+        -7px -7px 20px 0px rgba(109, 109, 109, 0.133),
+        -4px -4px 5px 0px rgba(112, 112, 112, 0.133),
+        7px 7px 20px 0px rgb(214, 214, 214),
+        4px 4px 5px 0px rgb(221, 221, 221), ;
+}

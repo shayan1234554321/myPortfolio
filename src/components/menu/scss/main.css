@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+.menu {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 50;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+.menu .setting, .menu .settingBlur {
+  pointer-events: all;
+  cursor: pointer;
+  width: 7vh;
+  height: 7vh;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out all;
+  z-index: 2;
+}
+.menu .settingBlur {
+  filter: blur(10px);
+  z-index: 1;
+  transition: 0.3s ease-in-out all;
+  background-color: #f74168 !important;
+}
+.menu .settingInside {
+  border-radius: 50% !important;
+  width: 15%;
+  height: 15%;
+  margin-right: 4%;
+  z-index: 3;
+}
+.menu .sidebar {
+  position: absolute;
+  height: 100vh;
+  width: 60vh;
+  pointer-events: none;
+  right: 0;
+  transition: 0.5s ease-in-out all;
+  overflow: hidden;
+}
+.menu .sidebar .circle {
+  pointer-events: all;
+  width: 200%;
+  height: 200%;
+  border-radius: 50%;
+  background-color: #eeeeee;
+  top: -50%;
+  position: absolute;
+  transition: ease-in-out 0.7s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.menu .sidebar .circle .menuText {
+  cursor: pointer;
+  font-size: 7vh;
+  margin-bottom: 3%;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .sidebar {
+    width: 100% !important;
+  }
+  .sidebar .menuText {
+    font-size: 9vw !important;
+    margin-bottom: 7vh !important;
+  }
+}/*# sourceMappingURL=main.css.map */

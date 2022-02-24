@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+$font1 : 'Poppins', sans-serif;
+
+
+.startup {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 3vw;
+    font-family: $font1;
+    z-index: 80;
+    .welcome{
+        margin-right: 2vw;
+        font-weight: 800;
+    }
+    .shayan{
+        font-size: 9vw;
+
+    }
+    .startDot{
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        border-radius: 50%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .startup{
+        font-size: 40px;
+    }
+    .shayan{
+        font-size: 115px !important ;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .startup{
+        font-size: 20px;
+    }
+    .shayan{
+        font-size: 55px !important ;
+    }
+}
+.khan{
+    transition-timing-function: ease ;
+}

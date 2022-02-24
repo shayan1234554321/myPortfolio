@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comforter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rock+3D&display=swap");
+.expertise {
+  width: 100%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.expertise .experience {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 2vh;
+  height: 60vh;
+  padding: 30px 0px;
+  box-shadow: -7px -7px 20px 0px white, -4px -4px 5px 0px white, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+}
+.expertise .comfortable {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 40vh;
+  margin-bottom: 10vh;
+}
+.expertise .button1 {
+  margin-top: 6vh;
+  margin-bottom: 3vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5vh;
+  color: #f74168;
+  cursor: default;
+  letter-spacing: 5px;
+  border-radius: 10px;
+  padding: 2vw;
+  background-color: #f0f0f0;
+  border: none;
+  box-shadow: -7px -7px 20px 0px white, -4px -4px 5px 0px white, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  transition: 0.3s ease-in-out;
+}
+.expertise .button1:hover {
+  box-shadow: -7px -7px 20px 0px rgba(109, 109, 109, 0.133), -4px -4px 5px 0px rgba(112, 112, 112, 0.133), 7px 7px 20px 0px #e7e7e7, 4px 4px 5px 0px #e7e7e7;
+}
+
+@media (max-aspect-ratio: 5/4) {
+  .experience {
+    grid-template-columns: 1fr 1fr !important;
+    height: 100vh !important;
+  }
+
+  .comfortable {
+    grid-template-columns: 1fr 1fr !important;
+    height: 60vh !important;
+  }
+}
+.progress {
+  position: relative;
+  left: calc(50% - 6.5vh);
+  top: calc(50% - 6.5vh);
+  cursor: default;
+  background-color: white;
+  box-shadow: -7px -7px 20px 0px white, -4px -4px 5px 0px white, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  border-radius: 50%;
+  width: 13vh;
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+.progress .circle {
+  stroke: #f74168;
+  stroke-width: 1.5vh;
+  stroke-linecap: round;
+  stroke-dasharray: 31vh;
+  fill: none;
+}
+.progress .circleName {
+  font-size: 1.7vh;
+  font-weight: bold;
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.progress:hover {
+  box-shadow: -7px -7px 20px 0px #0002, -4px -4px 5px 0px #0002, 7px 7px 20px 0px white, 4px 4px 5px 0px white;
+}
+
+.button2 {
+  position: relative;
+  top: calc(50% - 6vh);
+  left: calc(50% - 6vh);
+  width: 12vh;
+  height: 12vh;
+  box-shadow: -7px -7px 20px 0px white, -4px -4px 5px 0px white, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.61);
+  transition: 0.3s ease-in-out;
+}
+.button2 .buttonImage {
+  width: 8vh;
+  height: 8vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.button2:hover {
+  box-shadow: -7px -7px 20px 0px rgba(109, 109, 109, 0.133), -4px -4px 5px 0px rgba(112, 112, 112, 0.133), 7px 7px 20px 0px #d6d6d6, 4px 4px 5px 0px #dddddd;
+}/*# sourceMappingURL=expertise.css.map */

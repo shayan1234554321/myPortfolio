@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .App {
+    -ms-scroll-snap-type: y proximity;
+        scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }/*# sourceMappingURL=app.css.map */

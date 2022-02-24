@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+$font1: "Poppins", sans-serif;
+$font2 : 'Oswald', sans-serif;
+
+
+.wallpaper{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    //---------------------- Logo ------------------------
+    
+    .pixelLogo{
+        position: absolute;
+        pointer-events: none;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        // justify-content: end;
+        align-items: flex-end;
+        flex-direction: column;
+        color: white;
+        z-index: 50;
+        a{
+            pointer-events: all;
+            font-family: $font1;
+            font-weight: bold;
+            letter-spacing: 21.5px;
+            margin-right: 30px;
+            margin-top: 30px;
+            a{
+                margin: 0;
+            }
+        }
+        a:nth-child(2){
+            text-decoration: none;
+            letter-spacing: 4px;
+            color: white;
+            margin-right: 50px;
+            margin-bottom: 30px;
+            margin-top: 0px;
+            font-size:15px ;
+            a{
+                margin: 0;
+                letter-spacing: 4px;
+            }
+        }
+    }
+    
+    //---------------------- Front ------------------------
+    
+    .front{
+        width: 100%;
+        position: absolute;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-position: center;
+        background-size: cover;
+        transition: 1.5s ease-in-out;
+        z-index: 20;
+        
+        // ---------------------- Explore Button -------------------------
+        
+        .frontButton{
+            position: relative;
+            margin-bottom: 8vh;
+            margin-top: 8vh;
+            z-index: 0 ;
+            background-color: black;
+            color: white;
+            overflow: hidden;
+        }
+        .frontButton, .frontButton:after{
+            padding: 2vh;
+            padding-left: 4vh;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            font-family: $font2;
+            font-weight: bold;
+            letter-spacing: 20px;
+            text-align: center;
+            font-size: 3vh;
+            cursor: pointer;
+        }
+        .frontButton:after{
+            content: "EXPLORE";
+            position: absolute;
+            top: 10vh;
+            left: 0;
+            background-color: white;
+            color: black;
+            transition: 0.3s ease-in-out;
+        }
+        .frontButton:hover::after{
+            top: 0vh;
+        }
+
+        //------------------------ Front Text -----------------------------
+        
+        .frontText{
+            cursor: default;
+            color: white;
+            letter-spacing: 20px;
+            font-size: 2vh;
+            margin-top: 2vh;
+            font-family: $font2;
+        }
+    }
+    
+    //------------------------ Wall Main Area -----------------------------
+
+    .wallMain{
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        // padding: 3vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        //----------Top----------
+        
+        .wallTop{
+            width: 100%;
+            padding-left: 4vw;
+            padding-top: 2vh;
+            .searchBox{
+                padding: 10px;
+                background-color: white;
+                width: fit-content;
+                border-radius: 5px;
+                .searchInput{
+                    border: none;
+                    font-family: $font1;
+                    outline: none;
+                    font-weight: bold;
+                }
+                .searchIcon{
+                    width: 3vh;
+                    height: 3vh;
+                    border: 0.4vh solid black;
+                    background-color: white;
+                    border-radius: 50%;
+                    position: relative;
+                    transform: translateY(-5px);
+                    cursor: pointer;
+                    transition: 0.3s ease-in-out;
+                }
+                .searchIcon::before{
+                    content: '';
+                    width: 0.4vh;
+                    height: 0.8vh;
+                    background-color: black;
+                    position: absolute;
+                    right: -0.5vh;
+                    bottom: -0.5vh;
+                    transform: rotateZ(-45deg)  ;
+                }
+                .searchIcon:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        //----------Mid---------------------
+
+        .wallMid{
+            margin: 20px;
+            width: 100%;
+            padding-left: 4vw;
+            a{
+                color: white;
+                text-decoration: none;
+                font-family: $font1;
+            }
+
+            //-------------------- Orientation icons ----------------------
+            .orientationIcons{
+                display: flex;
+                .orienIcon{
+                    cursor: pointer;
+                    width: 50px;
+                    height: 50px;
+                    background-color: black;
+                    margin-right: 20px;
+                    border-radius: 50%;
+                    position: relative;
+                    transition: 0.3s ease-in-out;
+                    .orienIconInner{
+                        content: '';
+                        position: absolute;
+                        width: 50%;
+                        height: 50%;
+                        border: 3px solid white;
+                        left: 20%;
+                        top: 20%;
+                    }
+                }
+                .orienIcon::after{
+                    content: 'Landscape';
+                    position: absolute;
+                    background-color: white;
+                    bottom: -40px;
+                    color: black;
+                    left: -20px;
+                    border-radius: 5px;
+                    padding: 0px 10px;
+                    font-family: $font1;
+                    border: 2px solid black;
+                    display: none;
+                    z-index:5 ;
+                }
+                .orienIcon:nth-child(2)::after{
+                    content: 'Portrait';
+                    left: -10px;
+                }
+                .orienIcon:nth-child(3)::after{
+                    content: 'Normal';
+                    left: -5px;
+                }
+                .orienIcon:hover::after{
+                    display: block;
+                }
+
+                //----------------- Editing inner side ---------------------
+
+                .orienIcon:nth-child(1){
+                    .orienIconInner{
+                        height: 25%;
+                        top: 30%;
+                    }
+                }
+                .orienIcon:nth-child(2){
+                    .orienIconInner{
+                        width: 25%;
+                        left: 30%;
+                    }
+                }
+                .orienIcon:hover{
+                    background-color: white;
+                    .orienIconInner{
+                        border: 3px solid black;
+                    }
+                }
+                
+            }
+        }
+
+        //------------------- Wall Bottom ---------------------------
+        
+        .wallBottom{
+            position: relative;
+            width: 95%;
+            background-color: white;
+            border-radius: 5px;
+            height: 70vh;
+            padding: 10px;
+            .imageGrid{
+                overflow: scroll;
+                column-gap: 10px;
+                display: grid ;
+                grid-template-columns: 1fr 1fr 1fr;
+                height: 65vh;
+                margin-bottom: 5px;
+
+                .col1 , .col2 , .col3{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    .gridImageDetail{
+                        position: absolute;
+                        bottom: 14px;
+                        width: calc(100% - 20px);
+                        background-color: rgba(0, 0, 0, 0.418);
+                        padding: 10px;
+                        opacity: 0;
+                        a{
+                            color: white;
+                            text-decoration: none;
+                            font-family: $font2;
+                        }
+                    }
+                    
+                    .gridImage{
+                        width: 100%;
+                        margin-bottom: 10px;
+                        cursor: pointer;
+                    }
+                    .gridImage:hover + .gridImageDetail{
+                        opacity: 1;
+                    }
+                    .gridImageDetail:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+            .nextPageButton{
+                background-color: black;
+                border-radius: 5px;
+                color: white;
+                max-width: 300px;
+                font-family: $font1;
+                cursor: pointer;
+            }
+
+            .loadingScreen{
+                position: absolute;
+                width: 98%;
+                height: 96%;
+                background-color: rgba(0, 0, 0, 0.39);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .loadingCircle1 , .loadingCircle2 , .loadingCircle3{
+                    width: 30px;
+                    height: 30px;
+                    background-color: black;
+                    border-radius: 50%;
+                }
+                .loadingCircle1{
+                    animation: firstDot 3s ease-in-out infinite;
+                }
+                .loadingCircle2{
+                    margin: 0 20px;
+                    animation: secondDot 3s ease-in-out infinite;
+                }
+                .loadingCircle3{
+                    animation: thirdDot 3s ease-in-out infinite;
+                }
+            }
+            .loadingText{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50px);
+                text-decoration: none;
+                font-family: $font2;
+            }
+            
+        }
+        .wallBottom::-webkit-scrollbar{
+            display: block;
+            width: 10px;
+        }
+        .wallBottom::-webkit-scrollbar-track{
+            border-radius: 5px;
+            background: white;
+        }
+        .wallBottom::-webkit-scrollbar-thumb{
+            border-radius: 5px;
+            background: black;
+        }
+
+
+    }
+}
+
+@media (max-aspect-ratio: 4/5) {
+    .frontText{
+        // font-size: 10px !important;
+        letter-spacing: 8px !important;
+    }
+    .pixelLogo {
+        opacity: 0;
+    }
+    .wallBottom{
+        width: 80%  !important;
+        .imageGrid{
+            grid-template-columns: 1fr !important;
+
+        }
+    }
+    .wallTop{
+        padding-left: calc(50vw ) !important;
+    }
+    .wallMid{
+        padding-left: calc(50vw ) !important;
+
+    }
+}
+
+@keyframes firstDot {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+}
+@keyframes secondDot {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+}
+@keyframes thirdDot {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+}

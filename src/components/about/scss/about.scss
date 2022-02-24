@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+// ----------variables------------
+
+$bgColor : rgb(240, 240, 240) ;
+$font1: "Poppins", sans-serif;
+$blue : rgb(247, 65, 104) ;
+$shadow : -7px -7px 20px 0px rgba(255, 255, 255, 0.76),
+-4px -4px 5px 0px rgba(255, 255, 255, 0.808),
+7px 7px 20px 0px #0002,
+4px 4px 5px 0px #0001, ;
+
+.about {
+  cursor: default;
+  width: 100vw;
+  // height: 100vh;
+  background-color: rgb(240, 240, 240);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: $font1;
+  scroll-snap-align: start;
+  
+    //--------------------left side ---------------------
+
+  .leftSide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    // border: 2px solid blue;
+
+    //-----------backgrounds-------------
+
+    .bgBlue{
+        position: absolute;
+        width: 100%;
+        height: 64vh;
+        background-color: $blue ;
+    }
+    .bgPlant{
+        position: absolute;
+        width: 16vh;
+        height: 30vh;
+        background-size: cover;
+        left: 5vw;
+        bottom: 8vh;
+        cursor: grab;
+        z-index: 10;
+    }
+
+    // ----------main front-----------
+
+    .aboutMe {
+      margin-left: -25%;
+      font-size: 5vh;
+      letter-spacing: 2vh;
+      font-weight: bold;
+      position: relative;
+      z-index: 9;
+    }
+    .aboutLine {
+      width: 80%;
+      height: 50%;
+      bottom: 0;
+      right: -3vh;
+      z-index: -1;
+      background-color: $blue;
+      position: absolute;
+      border-radius: 5vh;
+    }
+
+    //--------------frame------------------
+
+    .tabletFrame {
+      background-color: rgb(240, 240, 240);
+      margin-top: 7vh;
+      margin-bottom: 14.5vh;
+      margin-left: 30%;
+      height: 54vh;
+      width: 45vh;
+      border: 2vh solid black;
+      border-radius: 7%;
+      padding-top: 6vh;
+      font-size: 3vh;
+      position: relative;
+      z-index: 5;
+      .frontEnd {
+        margin-left: 30%;
+        font-weight: bold;
+        transition: 0.3s ease-in-out;
+      }
+      .frontEnd:hover{
+          letter-spacing: 0.4vh;
+      }
+
+      .developer{
+        color: $blue ;
+        font-weight: 900 ;
+      }
+
+      .myPictureText {
+        position: absolute;
+        transform: rotateZ(-90deg);
+        left: -12vh;
+        bottom: 42vh;
+        width: 50vh;
+        letter-spacing: 1vh;
+      }
+      .picture {
+        position: absolute;
+        right: 0px;
+        border-radius: 2vh 0 1vh 0;
+        transform: translateX(0.1vh) translateY(0.5vh) ;
+        width: 30vh;
+        height: 40vh;
+        background-position: right;
+        background-size: cover;
+      }
+    }
+  }
+
+//   ------------------- Right side ----------------
+
+  .rightSide {
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    .bgBlue2{
+        position: absolute;
+        width: 50%;
+        height: 64vh;
+        background-color: $blue ;
+        left: 0;
+        border-radius: 0 5vh 5vh 0;
+        z-index: 0;
+    }
+    .bgHat{
+        position: absolute;
+        right: 10%;
+        transform: rotateZ(-40deg);
+        width: 20vh;
+        height: 20vh;
+        background-size: cover;
+    }
+    
+    .rightFrame{
+        width: 80%;
+        height: 80%;
+        box-shadow: $shadow;
+        z-index: 5;
+        border-radius: 2vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .frameText{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3vh;
+            overflow: scroll;
+            font-size: 2.7vh;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.575);
+        }
+        .frameText:nth-child(1) , .frameText:nth-child(4){
+            font-size: 2vw;
+            letter-spacing: 2vh;
+            font-weight: bolder;
+            color: black;
+        }
+        .frameText:nth-child(3){
+          margin-top: -20px;
+        }
+    }
+
+  }
+}
+
+@media (max-aspect-ratio: 6/4) {
+  .about {
+    scroll-snap-align: none !important;
+    grid-template-columns: 1fr !important;
+    .aboutMe{
+        margin-left: 0 !important;
+    }
+    .tabletFrame {
+      margin-left: 0 !important;
+    }
+    .frameText:nth-child(1) , .frameText:nth-child(4){
+        letter-spacing: 1vh !important;
+        font-size: 4vw !important;
+    }
+  }
+}

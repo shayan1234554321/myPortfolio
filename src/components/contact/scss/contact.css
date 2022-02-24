@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+.contact {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+.contact .contactText {
+  z-index: 1;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  font-size: 4vh;
+  letter-spacing: 2vh;
+  font-weight: bold;
+}
+.contact .contactText .contactTextBelow {
+  font-size: 2vh;
+  letter-spacing: 0.7vh;
+}
+.contact .contactBottom {
+  z-index: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+.contact .contactBottom .contactLeft {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+.contact .contactBottom .contactLeft .contactForm {
+  position: absolute;
+  right: 0px;
+  width: 80%;
+  height: 75vh;
+  border-radius: 1vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+.contact .contactBottom .contactRight {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.contact .contactBottom .contactRight .number {
+  position: absolute;
+  bottom: 5vh;
+  right: 5vh;
+  letter-spacing: 0.5vh;
+  color: white;
+  font-weight: bold;
+}
+.contact .contactBottom .contactRight .whatsappIcon {
+  position: absolute;
+  right: 43vh;
+  bottom: 4vh;
+  background-size: cover;
+  width: 10vh;
+  height: 10vh;
+}
+.contact .contactBottom .hotPapper, .contact .contactBottom .hotPapper a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+.contact .contactBottom .hotPapper {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}
+
+.contact::after {
+  content: "";
+  position: absolute;
+  width: 190%;
+  height: 130vh;
+  background-color: #f74168;
+  z-index: 0;
+  bottom: -80vh;
+  transform: rotateZ(-20deg);
+}
+
+.form {
+  width: 80%;
+  margin-top: 5vh;
+  position: relative;
+}
+.form .formButton {
+  width: 100%;
+  height: 5%;
+  letter-spacing: 2px;
+  display: flex;
+  margin-bottom: 4%;
+  position: relative;
+}
+.form .formButton .formText {
+  margin-right: 20px;
+}
+.form .formButton .formInput {
+  outline: none;
+  padding-left: 20px;
+  height: 100%;
+  width: 65%;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+.form .formButton .formInput::-moz-placeholder {
+  font-weight: normal;
+}
+.form .formButton .formInput:-ms-input-placeholder {
+  font-weight: normal;
+}
+.form .formButton .formInput::placeholder {
+  font-weight: normal;
+}
+.form .formButton:nth-child(5) {
+  margin-bottom: 4vh;
+}
+.form .formButton:nth-child(6) .formInput {
+  height: 20vh;
+  padding-top: 20px;
+  resize: none;
+}
+.form .submitButton {
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  border: 0.8vh solid #f74168;
+  padding: 1vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  background: none;
+  font-family: "Poppins", sans-serif;
+  color: #f74168;
+  font-weight: bold;
+  border-radius: 2vh;
+  font-size: 1.8vh;
+  letter-spacing: 0.5vh;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  margin-bottom: -3vh;
+}
+.form .submitButton:hover {
+  background-color: #f74168;
+  color: white;
+}
+
+@media (max-aspect-ratio: 6/4) {
+  .contact {
+    scroll-snap-align: none !important;
+    height: 120vh !important;
+  }
+
+  .contactBottom {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contactText {
+    font-size: 3vh !important;
+  }
+  .contactText .contactTextBelow {
+    font-size: 1.5vh !important;
+  }
+
+  .contactForm {
+    right: 0 !important;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .formText {
+    font-size: 15px;
+  }
+
+  .formInput {
+    width: 50% !important;
+    font-size: 12px;
+  }
+
+  .hotPapper {
+    bottom: 0px !important;
+    left: calc(50% - 70px) !important;
+  }
+}/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
+
+// ----------variables------------
+
+$font1 : 'Poppins', sans-serif;
+$font2 : 'Comforter', cursive;
+$font3 : 'Rock 3D', cursive;
+
+.work{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(240, 240, 240);
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .workText{
+        padding-top: 10vh;
+        font-size: 5vw;
+        font-weight: bold;
+        font-family: $font1;
+        // animation: card 12s ease-in-out infinite;
+    }
+    .cards{
+        height: 70vh;
+        width: 100%;
+        display: grid;
+        // grid-row-gap: 10vh;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.card{
+    width: 30vh;
+    height: 40vh;
+    background-color: black;
+    border-radius: 10px;
+    animation: card 4s ease-in-out infinite;
+    position: relative;
+    left: calc(50% - 15vh);
+    top: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    .cardInside{
+        width: 20vh;
+        height: 15vh;
+        border: 4px solid white;
+        border-radius: 5px;
+        margin-top: 2vh;
+        background-position: center;
+        background-size: cover;
+        transition: 0.3s ease-in-out;
+    }
+
+    .cardName{
+        font-family: $font1;
+        color: white;
+        margin-top: 10px;
+        font-size: 3vh;
+    }
+
+    .cardVisit{
+        margin-top: 3vh;
+        text-decoration: none;
+        color: white;
+        font-family: $font1;
+        font-weight: bold;
+        border: 2px solid white;
+        padding: 5px 10px;
+        border-radius: 40px;
+        background-color: black;
+        transition: 0.3s ease-in-out;
+        font-size:2vh ;
+    }
+    .cardVisit:hover{
+        color: black;
+        background-color: white;
+    }
+
+}
+.card::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2%;
+    background-color: black;
+    filter: blur(10px);
+    transform: translateY(10vh);
+    animation: cardShadow 4s ease-in-out infinite;
+}
+.card:hover{
+    animation-play-state: paused;
+}
+.card:hover:after{
+    animation-play-state: paused ;
+}
+.card:hover .cardInside {
+    transform: scale(1.2);
+}
+
+
+
+@media (max-aspect-ratio: 5/4) {
+    .cards{
+        grid-template-columns: 1fr 1fr !important;
+        height: 130vh !important;
+        scroll-snap-align: none !important;
+    }
+}
+@media (max-aspect-ratio: 4/5) {
+    .cards{
+        grid-template-columns: 1fr !important;
+        height: 202vh !important;
+        scroll-snap-align: none !important;
+    }
+}
+
+@keyframes coloring {
+    0%{
+        background-color: rgba(223, 255, 42, 0.664);
+    }
+    20%{
+        background-color: rgba(42, 255, 78, 0.705);
+    }
+    45%{
+        background-color: rgba(42, 255, 173, 0.671);
+    }
+    70%{
+        background-color: rgba(78, 255, 42, 0.61);
+    }
+    100%{
+        background-color: rgba(223, 255, 42, 0.671);
+    }
+}
+
+@keyframes card {
+    0%{
+        transform: translateY(-0vh);
+    }
+    50%{
+        transform: translateY(-3vh);
+    }
+    100%{
+        transform: translateY(-0vh);
+    }
+}
+@keyframes cardShadow {
+    0%{
+        transform: translateY(10vh);
+        filter: blur(10px);
+
+    }
+    50%{
+        transform: translateY(13vh);
+        filter: blur(25px);
+
+    }
+    100%{
+        transform: translateY(10vh);
+        filter: blur(10px);
+
+    }
+}
+
+

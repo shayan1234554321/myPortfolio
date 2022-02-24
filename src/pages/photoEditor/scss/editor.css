@@ -1,0 +1,108 @@
+.editor {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.editor .editorPhoto {
+  background-position: center;
+  background-size: cover;
+  margin-top: 40px;
+  margin-bottom: 120px;
+}
+.editor .editorPhoto .editorSize {
+  height: 60vh;
+}
+.editor .editorBottom {
+  position: relative;
+  bottom: 90px;
+}
+.editor .editorBottom .editorSelect {
+  position: absolute;
+  left: 50%;
+  background-color: white;
+  border-radius: 40px;
+  transform: translateX(-210px);
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.editor .editorBottom .editorSelect .editorIcon {
+  cursor: pointer;
+  position: relative;
+  margin: 20px 20px;
+}
+.editor .editorBottom .editorSelect .editorIcon::after {
+  content: "holo";
+  position: absolute;
+  padding: 5px 10px;
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  font-size: 20px;
+  transform: rotateZ(50deg);
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+.editor .editorBottom .editorSelect .editorIcon:nth-child(1)::after {
+  content: "Brightness";
+  top: 20px;
+}
+.editor .editorBottom .editorSelect .editorIcon:nth-child(4)::after {
+  content: "Contrast";
+  top: 20px;
+}
+.editor .editorBottom .editorSelect .editorIcon:nth-child(5)::after {
+  content: "Grey-Scale";
+  top: 20px;
+}
+.editor .editorBottom .editorSelect .editorIcon:nth-child(6)::after {
+  content: "Saturation";
+  top: 20px;
+}
+.editor .editorBottom .editorSelect .editorIcon:hover::after {
+  opacity: 1;
+  top: -20px;
+  transform: rotateZ(0deg);
+}
+.editor .editorBottom .editorSelect .editorIcon:nth-child(2)::after {
+  content: "Sepia";
+}
+.editor .editorBottom .editorSelect .editorIcon:nth-child(3)::after {
+  content: "Blur";
+}
+.editor .editorBottom .editorSlider {
+  cursor: pointer;
+  width: 350px;
+  margin-bottom: 10px;
+}
+
+@media (max-aspect-ratio: 4/5) {
+  .editorSlider {
+    width: 250px !important;
+  }
+
+  .editorIcon {
+    margin: 10px 10px !important;
+    font-size: 20px !important;
+  }
+
+  .editorSelect {
+    left: 85% !important;
+  }
+
+  .editorSize {
+    height: 40vh !important;
+  }
+}/*# sourceMappingURL=editor.css.map */

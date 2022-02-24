@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+// ----------variables------------
+
+$font1: "Poppins", sans-serif;
+$bgColor : rgb(240, 240, 240) ;
+$blue : rgb(247, 65, 104) ;
+
+
+.contact{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $bgColor;
+    font-family: $font1;
+    position: relative;
+
+    //------------- Top ----------------
+    
+    .contactText{
+        z-index: 1;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        font-size: 4vh;
+        letter-spacing: 2vh;
+        font-weight: bold;
+        .contactTextBelow{
+            font-size: 2vh;
+            letter-spacing: 0.7vh;
+        }
+    }
+    
+    //------------- Bottom ----------------
+
+    .contactBottom{
+        z-index: 1;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+
+        //-------------- Left side ------------------
+        
+        .contactLeft{
+            width: 100%;
+            height:80vh;
+            position: relative;
+            .contactForm{
+                position: absolute;
+                right: 0px;
+                width: 80%;
+                height: 75vh;
+                border-radius: 1vh;
+                background-color: white;
+                display: flex;
+                // align-items: center;
+                justify-content: center;
+            }
+        }
+
+        //-------------- Right side ------------------
+
+        .contactRight{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            .number{
+                position: absolute;
+                bottom: 5vh;
+                right: 5vh;
+                letter-spacing: 0.5vh;
+                color: white;
+                font-weight: bold;
+            }
+            .whatsappIcon{
+                position: absolute;
+                right: 43vh;
+                bottom: 4vh;
+                background-size: cover;
+                width: 10vh;
+                height: 10vh;
+            }
+        }
+        .hotPapper, .hotPapper a{
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .hotPapper{
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+        }
+    }
+}
+
+.contact::after{
+    content: '';
+    position: absolute;
+    width: 190%;
+    height: 130vh;
+    background-color: $blue;
+    z-index: 0;
+    bottom: -80vh;
+    transform: rotateZ(-20deg);
+}
+
+//--------------------- Form ---------------------------
+
+.form{
+    width: 80%;
+    margin-top: 5vh;
+    position: relative;
+    .formButton{
+        width: 100%;
+        height: 5%;
+        letter-spacing: 2px;
+        display: flex;
+        margin-bottom: 4%;
+        position: relative;
+        .formText{
+            margin-right: 20px;
+        }
+        .formInput{
+            outline: none;
+            padding-left: 20px;
+            height: 100%;
+            width: 65%;
+            background-color: $bgColor;
+            border-radius: 5px;
+            position: absolute;
+            right: 0;
+            border: none;
+            font-family: $font1;
+            font-weight: bold;
+        }
+        .formInput::placeholder{
+            font-weight: normal;
+        }
+    }
+    .formButton:nth-child(5){
+        margin-bottom: 4vh;
+    }
+    .formButton:nth-child(6){
+        .formInput{
+            height: 20vh;
+            padding-top: 20px;
+            resize: none;
+        }
+    }
+    .submitButton{
+        position: absolute;
+        bottom: 10%;
+        right: 0;
+        border: 0.8vh solid $blue;
+        padding: 1vh;
+        padding-left: 2vh;
+        padding-right: 2vh;
+        background: none;
+        font-family: $font1;
+        color: $blue;
+        font-weight: bold;
+        border-radius: 2vh;
+        font-size: 1.8vh;
+        letter-spacing: 0.5vh;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        margin-bottom: -3vh ;
+    }
+    .submitButton:hover{
+        background-color: $blue;
+        color: white;
+    }
+}
+
+@media (max-aspect-ratio: 6/4){
+    .contact{
+        scroll-snap-align: none !important;
+        height: 120vh !important;
+    }
+    .contactBottom{
+        grid-template-columns: 1fr !important;
+    }
+    .contactText{
+        font-size: 3vh !important;
+        .contactTextBelow{
+            font-size: 1.5vh !important;
+        }
+    }
+    .contactForm{
+        right: 0 !important;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .formText{
+        font-size: 15px;
+
+    }
+    .formInput{
+        width: 50% !important;
+        font-size: 12px;
+    }
+    .hotPapper{
+        bottom: 0px !important ;
+        left: calc( 50% - 70px ) !important ;
+    }
+} 
