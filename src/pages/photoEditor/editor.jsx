@@ -51,7 +51,7 @@ const Editor = () => {
           <img src={image} className="editorSize" />
       </div>
       :
-          <div style={{color: "white" ,  fontFamily: "fantasy" }} >Select an image</div>
+          <div style={{color: "white" ,  fontFamily: "fantasy" , height: "40vh" }} >Select an image</div>
       }
         <div className="editorBottom">
           <input className='editorSlider' onChange={(e)=>{setBrightness(e.target.value)}} value={brightness} style={{display: (select === "brightness")? 'block':'none' }} type="range" min="1" max="200"  />
